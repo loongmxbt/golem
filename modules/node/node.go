@@ -20,14 +20,14 @@ func GetNodeById(ctx *macaron.Context) {
 
 }
 
-func GetNodeBySlug(ctx *macaron.Context) {
-
-}
-
-func GetNode(ctx *macaron.Context) {
-
-}
-
 func CreateNode(ctx *macaron.Context) {
+
+}
+
+func UpdateNode(ctx *macaron.Context) {
+
+}
+
+func DeleteNode(ctx *macaron.Context) {
 
 }

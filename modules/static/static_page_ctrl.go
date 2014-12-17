@@ -10,9 +10,13 @@ const (
 )
 
 func HomePage(ctx *macaron.Context) {
+	ctx.Data["Title"] = "主页"
+	ctx.Data["IsHomePage"] = true
 	ctx.HTML(200, TplHomePage)
 }
 
 func AboutPage(ctx *macaron.Context) {
+	ctx.Data["Title"] = "关于"
+	ctx.Data["IsAboutPage"] = true
 	ctx.HTML(200, TplAboutPage)
 }

@@ -6,9 +6,9 @@ import (
 
 type User struct {
 	Id       int64
-	Username string    `xorm:"UNIQUE NOT NULL"`
-	Email    string    `xorm:"UNIQUE NOT NULL"`
-	Password string    `xorm:"NOT NULL"`
-	Created  time.Time `xorm:"CREATED"`
-	Updated  time.Time `xorm:"UPDATED"`
+	Username string    `xorm:"varchar(25) not null unique"`
+	Email    string    `xorm:"not null unique"`
+	Password string    `xorm:"not null"`
+	Created  time.Time `xorm:"created"`
+	Updated  time.Time `xorm:"updated"`
 }

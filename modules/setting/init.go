@@ -23,7 +23,3 @@ func InitORM() {
 		log.Fatal(4, "Fail to initialize ORM engine: %v", err)
 	}
 }
-
-func LoadConfig() {
-
-}

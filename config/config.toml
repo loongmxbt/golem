@@ -1,0 +1,10 @@
+[app]
+ver  = "0.1.0"
+name = "Golem CMS"
+
+[db]
+host   = "127.0.0.1:3306"
+driver = "mysql"
+uname  = "root"
+passwd = "mxbtsql1014"
+dbname = "GolemCMS"

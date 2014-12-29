@@ -2,13 +2,13 @@ package main
 
 import (
 	"github.com/Unknwon/macaron"
-	"github.com/loongmxbt/golem/modules/setting"
+	"github.com/loongmxbt/golem/modules/base"
 	"github.com/loongmxbt/golem/modules/static"
 )
 
 func main() {
 
-	setting.GlobalInit()
+	base.GlobalInit()
 
 	// Classic includes Logger, Recovery, Static
 	m := macaron.Classic()

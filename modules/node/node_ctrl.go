@@ -2,6 +2,7 @@ package node
 
 import (
 	"github.com/Unknwon/macaron"
+	"github.com/loongmxbt/golem/models"
 )
 
 func GetNodesAll(ctx *macaron.Context) {

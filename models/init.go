@@ -14,16 +14,17 @@ var (
 	HasEngine bool
 )
 
+// Where call init() ?
 func init() {
 	tables = append(tables, new(User), new(Node))
 }
 
 func NewEngine(engine *xorm.Engine) (err error) {
 
-	cnnstr := ""
+	connstr := ""
 	switch config.DbDriver {
 	case "mysql":
-		cnnstr = fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8",
+		connstr = fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8",
 			config.DbUname, config.DbPasswd, config.DbHost, config.DbDbname)
 
 	case "postgres":
@@ -34,7 +35,7 @@ func NewEngine(engine *xorm.Engine) (err error) {
 		return fmt.Errorf("Unknown database type: %s", config.DbDriver)
 	}
 
-	engine, err = xorm.NewEngine(config.DbDriver, cnnstr)
+	engine, err = xorm.NewEngine(config.DbDriver, connstr)
 	if err != nil {
 		return fmt.Errorf("models.init(fail to connect to database): %v", err)
 	}
@@ -45,7 +46,8 @@ func NewEngine(engine *xorm.Engine) (err error) {
 func InitORM() {
 	var engine *xorm.Engine
 	if err := NewEngine(engine); err != nil {
-		log.Fatal(4, "Fail to initialize ORM engine: %v", err)
+		log.Fatalf("Fail to initialize ORM engine: %v", err)
 	}
+	HasEngine = true
 	log.Println("Init ORM succeed!")
 }

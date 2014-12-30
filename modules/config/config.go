@@ -6,12 +6,6 @@ import (
 	"github.com/pelletier/go-toml"
 )
 
-// data key must be small case and struct must be capital
-// var data = `
-// appver: 0.1.0
-// appname: Golem CMS
-// `
-
 var (
 	AppVer  string
 	AppName string
@@ -27,7 +21,7 @@ func LoadConfig() {
 	config, err := toml.LoadFile("config/config.toml")
 
 	if err != nil {
-		log.Fatal(4, "Fail to load config file: %v", err)
+		log.Fatalf("Fail to load config file: %v", err)
 	} else {
 		// retrieve data directly
 		AppVer = config.Get("app.ver").(string)

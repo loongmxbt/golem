@@ -45,4 +45,19 @@ body {
 code {
   font-size: 80%;
 }
+
+
+/* SignIn Form */
+#form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* SignUp Form */
+#form-signup {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
         

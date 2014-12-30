@@ -1,9 +1,5 @@
 package user
 
-import (
-	"github.com/macaron-contrib/binding"
-)
-
 type SignUpForm struct {
 	Username string `form:"uname" binding:"Required;AlphaDashDot;MaxSize(35)"`
 	Email    string `form:"email" binding:"Required;Email;MaxSize(50)"`

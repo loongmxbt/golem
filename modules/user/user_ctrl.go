@@ -5,8 +5,9 @@ import (
 )
 
 const (
-	TplSignIn string = "user/signin"
-	TplSignUp string = "user/signup"
+	TplSignIn  string = "user/signin"
+	TplSignUp  string = "user/signup"
+	TplProfile string = "user/profile"
 )
 
 func SignUp(ctx *macaron.Context) {
@@ -30,5 +31,9 @@ func SignInPost(ctx *macaron.Context, form SignInForm) {
 	ctx.Data["Email"] = form.Email
 	ctx.Data["Password"] = form.Password
 	ctx.Data["Flash"] = "Signin Succeed!"
+}
 
+func Profile(ctx *macaron.Context) {
+	ctx.Data["Profile"] = "用户信息"
+	ctx.HTML(200, TplProfile)
 }

@@ -8,3 +8,7 @@ driver = "mysql"
 uname  = "root"
 passwd = "mxbtsql1014"
 dbname = "GolemCMS"
+
+[i18n]
+langs = ["en-US", "zh-CN"]
+names = ["English", "简体中文"]

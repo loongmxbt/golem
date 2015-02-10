@@ -12,7 +12,7 @@
       <ul class="nav navbar-nav">
         <li {{if .IsHomePage}}class="active"{{end}}><a href="/">Home</a></li>
         <li {{if .IsAboutPage}}class="active"{{end}}><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li {{if .IsContactPage}}class="active"{{end}}><a href="/contact">Contact</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
           <ul class="dropdown-menu">
